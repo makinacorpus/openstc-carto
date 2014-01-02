@@ -1,0 +1,12 @@
+html, body, #container {
+    height: 100%;
+    margin: 0px;
+}
+
+#map {
+  height: 100%;
+}
+
+.leaflet-popup {
+    width: 200px;
+}
