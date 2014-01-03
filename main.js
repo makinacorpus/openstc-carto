@@ -25,8 +25,10 @@ function loadData() {
 			table_body += "<tr id=" + 10000 + id + " onmouseover='map._layers[ " + 10000 + id +"].openPopup();''>"+table_row+"</tr>";   
 			//table_body += "<tr id=" + 10000 + id + " onmouseover='console.log(" + 10000 + id + ");'>"+table_row+"</tr>";   
 			var marker = new L.marker(new L.LatLng(f.geometry.coordinates[1], f.geometry.coordinates[0]), { title: f.properties.nom });
-			marker._leaflet_id = '10000' + id;
 			marker.bindPopup(f.properties.description);
+			marker.on('mouseover', marker.openPopup.bind(marker));
+			marker.on('mouseout', marker.closePopup());
+			marker._leaflet_id = '10000' + id;
 			markers.addLayer(marker);
 		}
 		$("#table").html(table_body+"</table>");
