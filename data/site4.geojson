@@ -1,0 +1,7 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "id": 4, "nom": "École Jacques Prévert" }, "geometry": { "type": "Point", "coordinates": [ -1.287521341393422, 47.093648106175507 ] } }
+]
+}

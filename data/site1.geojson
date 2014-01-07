@@ -1,0 +1,7 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "nom": "Mairie" }, "geometry": { "type": "Point", "coordinates": [ -1.27800756934247, 47.088336598092816 ] } }
+]
+}

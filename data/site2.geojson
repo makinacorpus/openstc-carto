@@ -1,0 +1,7 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "id": 2, "nom": "Rue Berthou" }, "geometry": { "type": "Point", "coordinates": [ -1.281886743284168, 47.08675985059341 ] } }
+]
+}

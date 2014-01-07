@@ -1,0 +1,7 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "id": 3, "nom": "Collège Cacault" }, "geometry": { "type": "Point", "coordinates": [ -1.288641991643245, 47.092100860659855 ] } }
+]
+}
