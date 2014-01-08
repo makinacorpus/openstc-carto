@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "id": 4, "libelle": "Porte salle A14", "nom": "École Jacques Prévert", "description": "La porte de la salle A14 ne ferme plus", "service": "Bâtiments", "demandeur": "École Maternelle Jacques Prévert", "date": "8 décembre 2013 13:56", "statut": "terminée", "site": 4, "duree": "5", "avancement": "<div class='progress'><div class='progress-bar progress-bar-success' role='progressbar' style='width: 100%;'><span>100%</span></div></div>" } }
+
+]
+}

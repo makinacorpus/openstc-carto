@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "id": 5, "libelle": "Branche cassée", "nom": "Mairie", "description": "Branche cassée sur un platane", "service": "Espaces verts", "demandeur":"M. Roger" , "date": "12 décembre 2013 12:27", "statut": "validée", "site": 1, "duree": "2", "avancement": "<div class='progress'><div class='progress-bar' role='progressbar' style='width: 60%;'><span>60%</span></div></div>" } }
+,
+{ "type": "Feature", "properties": { "id": 1, "libelle": "Robinet", "nom": "Mairie", "description": "Le robinet des toilettes du deuxième étage fuit", "service": "Bâtiments", "demandeur":"Service interne" , "date": "27 novembre 2013 09:43", "statut": "terminée", "site": 1, "duree": "3", "avancement": "<div class='progress'><div class='progress-bar progress-bar-success' role='progressbar' style='width: 100%;'><span>110%</span></div></div>" } }
+
+]
+}

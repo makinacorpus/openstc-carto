@@ -18,6 +18,7 @@ function loadData() {
     	$.each(data.features, function() {
 			var table_row = "";
 			var id = this.properties.id;
+			var inter = this;
 			$.each(this.properties, function(k , v) {
 				if (( k in expected_keys ) && expected_keys[k] ) {
 					table_row += "<td>" + v + "</td>";
@@ -25,23 +26,41 @@ function loadData() {
 			})
 			if (displayed_sites.indexOf(this.properties.site) == -1) {
 				// This is a new site
-				displayed_sites.push(this.properties.site);
-				var jsondata = {};
-			    $.getJSON("data/site" + this.properties.site + ".geojson", function(data) {
+				var site = this.properties.site;
+				console.log(site);
+				displayed_sites.push(site);
+			    $.getJSON("data/site" + site + ".geojson", function(data) {
 			       	var marker = new L.marker(new L.LatLng(data.features[0].geometry.coordinates[1], data.features[0].geometry.coordinates[0]), { title: data.features[0].properties.nom });
-					marker.bindPopup(data.features[0].properties.nom);
-					marker.on('mouseover', marker.openPopup.bind(marker));
-					marker._leaflet_id = '10000' + data.features[0].properties.id;
-					markers.addLayer(marker);
-				} );
-			} else {
-				// There is already at least one intervention for this site
+					var popupContent = "<h5>" + data.features[0].properties.nom + "</h5>"
+									 + "<table class='table table-bordered'>"
+									 + "<thead><tr><th style='min-width: 33px';>N°</th><th>Intervention</th><th>Durée</th><th>Avancement</th></tr></thead>";
+					var popupContentBody = "";
+					$.getJSON("data/intersite" + site + ".json", function(data) {
+						popupContentBody = "<tbody>" 
+						for (var i = 0; i < data.features.length; i++) {
+						    popupContentBody += "<tr><td>" + data.features[i].properties.id + "</td>"
+											 + "<td>" + data.features[i].properties.libelle + "</td>"
+											 + "<td>" + data.features[i].properties.duree + "</td>"
+											 + "<td>" + data.features[i].properties.avancement + "</td></tr>";
+						}
+						popupContentBody += "</tbody>";
+						popupContent += popupContentBody + "</table>";
+					    var popupOptions =
+					    {
+					        minWidth: 'auto',
+					        closeButton: false
+					    };
+						marker.bindPopup(popupContent, popupOptions);
+						marker.on('mouseover', marker.openPopup.bind(marker));
+						marker._leaflet_id = '10000' + site;
+						markers.addLayer(marker);
+					});
+				});
 			}
 			table_body += "<tr class=" + 10000 + this.properties.site + " onmouseover='map._layers[ " + 10000 + this.properties.site +"].openPopup();''>"+table_row+"</tr>";   
-
+			map.addLayer(markers);
 		})
 		$("#table").html(table_body+"</table>");
-		map.addLayer(markers);
 		map.on('popupopen', function (e) {
 		  $("tr." + e.popup._source._leaflet_id).css("background", "#f5f5f5");
 		});
@@ -53,3 +72,5 @@ function loadData() {
 }
 
 loadData();
+
+
