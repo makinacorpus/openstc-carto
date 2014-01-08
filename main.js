@@ -27,11 +27,11 @@ function loadData() {
 			if (displayed_sites.indexOf(this.properties.site) == -1) {
 				// This is a new site
 				var site = this.properties.site;
-				console.log(site);
 				displayed_sites.push(site);
 			    $.getJSON("data/site" + site + ".geojson", function(data) {
 			       	var marker = new L.marker(new L.LatLng(data.features[0].geometry.coordinates[1], data.features[0].geometry.coordinates[0]), { title: data.features[0].properties.nom });
-					var popupContent = "<h5>" + data.features[0].properties.nom + "</h5>"
+					var popupContent = "<img src='data/img/" + data.features[0].properties.img + "'' width='60' style='margin: 5px;'>"
+									 + "<h5 style='display: inline;'>" + data.features[0].properties.nom + "</h5>"
 									 + "<table class='table table-bordered'>"
 									 + "<thead><tr><th style='min-width: 33px';>N°</th><th>Intervention</th><th>Durée</th><th>Avancement</th></tr></thead>";
 					var popupContentBody = "";
@@ -45,6 +45,7 @@ function loadData() {
 						}
 						popupContentBody += "</tbody>";
 						popupContent += popupContentBody + "</table>";
+						popupContent += "<button class='btn btn-primary' data-toggle='modal' data-target='#modalForm'>Nouvelle intervention</button>";
 					    var popupOptions =
 					    {
 					        minWidth: 'auto',

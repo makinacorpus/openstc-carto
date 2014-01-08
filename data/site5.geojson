@@ -2,6 +2,6 @@
 "type": "FeatureCollection",
                                                                                 
 "features": [
-{ "type": "Feature", "properties": { "id": 5, "nom": "Rond-Point des Templiers" }, "geometry": { "type": "Point", "coordinates": [ -1.276718429719424, 47.079281003042588 ] } }
+{ "type": "Feature", "properties": { "id": 5, "nom": "Rond-Point des Templiers", "img": "5.jpg" }, "geometry": { "type": "Point", "coordinates": [ -1.276718429719424, 47.079281003042588 ] } }
 ]
 }

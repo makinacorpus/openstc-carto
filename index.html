@@ -16,6 +16,229 @@
 	  	<div class="col-sm-7 col-lg-7" id="table"></div>
 	  	<div class="col-sm-5 col-lg-5" id="map"></div>
 	  </div>
+
+<div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+<div class="modal-content">
+
+
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3 class="modal-title">
+				<i class="fa fa-edit"></i>&nbsp;
+				
+					Nouvelle demande d'intervention
+				
+
+
+				 
+			</h3>
+		</div>
+
+
+
+		<!-- Modal Body  -->
+		<div class="modal-body">
+
+			<!-- Tabs -->
+			<ul class="nav nav-tabs nav-justified">
+				<li class="active"><a href="#" data-target="#aboutClaimer" data-toggle="tab">À propos du demandeur</a></li>
+				<li class=""><a href="#" data-target="#aboutRequest" data-toggle="tab">À propos de la demande</a></li>
+			</ul>
+
+
+			<form id="formSaveRequest" action="#" class="form-horizontal" role="form">
+
+				<div class="tab-content">
+
+				<!-- About the claimer -->
+				<fieldset class="tab-pane fade active in" id="aboutClaimer">
+
+
+					<!-- is Citizen ? -->
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="isCitizen">Administré</label>
+						<div class="col-sm-9">
+							<div class="make-switch has-switch" id="switchCitizen" data-on-label="oui" data-off-label="non" tabindex="0">
+								<div class="switch-off switch-animate"><input id="isCitizen" type="checkbox"><span class="switch-left">oui</span><label for="isCitizen">&nbsp;</label><span class="switch-right">non</span></div>
+							</div>
+						</div>
+					</div>
+
+
+
+					<!-- Request Contact -->
+					<div class="form-group hide-citizen " style="display: block;">
+						<label for="s2id_autogen2" class="control-label col-sm-3">Contact:</label>
+
+						<div class="col-sm-9">
+							<div class="select2-container select2" id="s2id_requestContact"><a href="javascript:void(0)" onclick="return false;" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen">Sélectionner un contact</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow"><b></b></span></a><input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen2"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><input id="requestContact" class="select2 select2-offscreen" data-placeholder="Sélectionner un contact" data-minimum-input-length="2" tabindex="-1">
+						</div>
+					</div>
+
+
+					<!-- Request Partner -->
+					<div class="form-group hide-citizen " style="display: block;">
+						<label for="s2id_autogen1" class="control-label col-sm-3">Organisation:</label>
+
+						<div class="col-sm-9">
+							<div class="select2-container select2" id="s2id_requestClaimer"><a href="javascript:void(0)" onclick="return false;" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen">Sélectionner un demandeur</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow"><b></b></span></a><input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen1"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><input id="requestClaimer" class="select2 select2-offscreen" data-placeholder="Sélectionner un demandeur" tabindex="-1">
+						</div>
+					</div>
+
+
+					<!-- Claimer Details -->
+					<div id="claimerDetails" class="panel panel-default  hide-soft ">
+						<div class="panel-heading">
+							<h3 class="panel-title">Détail du demandeur</h3>
+						</div>
+						<ul class="list-group">
+							<li id="claimerFunction" class="list-group-item">
+								<i class="fa fa-user fa-fw"></i>
+								<span></span>
+							</li>
+							<li id="claimerPhone" class="list-group-item">
+								<i class="fa fa	-phone fa-fw"></i>
+								<span></span>
+							</li>
+							<li id="claimerEmail" class="list-group-item">
+								<i class="fa fa-envelope fa-fw"></i>
+								<span></span>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Request Contact Name -->
+					<div class="form-group hide-no-citizen  hide-soft " style="display: none;">
+						<label for="requestContactName" class="control-label col-sm-3">Nom:</label>
+
+						<div class="col-sm-9">
+							 <input type="tel" id="requestContactName" class="form-control" value="">
+						</div>
+					</div>
+
+					<!-- Request Contact Phone -->
+					<div class="form-group hide-no-citizen  hide-soft " style="display: none;">
+						<label for="requestContactPhone" class="control-label col-sm-3">Téléphone:</label>
+
+						<div class="col-sm-9">
+							 <input type="tel" id="requestContactPhone" class="form-control readonly-no-citizen" value="">
+						</div>
+					</div>
+
+					<!-- Request Contact Email -->
+					<div class="form-group hide-no-citizen  hide-soft " style="display: none;">
+						<label for="requestContactEmail" class="control-label col-sm-3">Email:</label>
+
+						<div class="col-sm-9">
+							 <input type="email" id="requestContactEmail" class="form-control readonly-no-citizen" value="">
+						</div>
+					</div>
+
+
+				</fieldset>
+				<!-- / About the claimer -->
+
+
+				<!-- About the request -->
+				<fieldset class="tab-pane fade" id="aboutRequest">
+
+					<!-- Request Label -->
+					<div class="form-group">
+						<label for="requestName" class="control-label col-sm-3">Libellé:</label>
+
+						<div class="col-sm-9">
+							<input type="text" id="requestName" class="form-control" required="" value="">
+						</div>
+					</div>
+
+
+					<!-- Place / Equipment -->
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="onEquipment">Site / Equipement</label>
+						<div class="col-sm-9">
+							<div class="make-switch has-switch" id="switchPlaceEquipment" data-on="default" data-on-label="&lt;i class='fa fa-map-marker fa-fw'&gt;" data-off-label="&lt;i class='fa fa-wrench fa-fw'&gt;" tabindex="0">
+								<div class="switch-animate switch-on"><input id="onEquipment" type="checkbox" checked=""><span class="switch-left switch-default"><i class="fa fa-map-marker fa-fw"></i></span><label for="onEquipment">&nbsp;</label><span class="switch-right"><i class="fa fa-wrench fa-fw"></i></span></div>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- Request Equipment -->
+					<div class="form-group hide-no-place  hide-soft ">
+						<label for="s2id_autogen3" class="control-label col-sm-3">Equipement:</label>
+
+						<div class="col-sm-9">
+							<div class="select2-container select2" id="s2id_requestEquipment"><a href="javascript:void(0)" onclick="return false;" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen">Sélectionner un équipement</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow"><b></b></span></a><input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen3"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><input id="requestEquipment" class="select2 select2-offscreen" data-placeholder="Sélectionner un équipement" tabindex="-1">
+						</div>
+					</div>
+
+
+					<!-- Request Place -->
+					<div class="form-group">
+						<label for="s2id_autogen4" class="control-label col-sm-3">Emplacement:</label>
+
+						<div class="col-sm-9">
+							<div class="select2-container select2" id="s2id_requestPlace"><a href="javascript:void(0)" onclick="return false;" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen">Sélectionner un site</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow"><b></b></span></a><input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen4"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><input id="requestPlace" class="select2 select2-offscreen" data-placeholder="Sélectionner un site" tabindex="-1">
+						</div>
+					</div>
+
+					<!-- Request Place precision -->
+					<div class="form-group">
+						<label for="requestPlacePrecision" class="control-label col-sm-3">Précision sur le site:</label>
+
+						<div class="col-sm-9">  
+							 <textarea class="form-control" id="requestPlacePrecision" rows="2"></textarea>
+						</div>
+					</div>
+
+
+					<!-- Request Contact Service -->
+					<div class="form-group">
+						<label for="s2id_autogen5" class="control-label col-sm-3">Service concerné:</label>
+
+						<div class="col-sm-9">
+							<div class="select2-container select2" id="s2id_requestDetailService"><a href="javascript:void(0)" onclick="return false;" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen">Sélectionner un service</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow"><b></b></span></a><input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen5"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><input id="requestDetailService" class="select2 select2-offscreen" required="" data-placeholder="Sélectionner un service" tabindex="-1">
+						</div>
+					</div>
+
+
+					<!-- Request Description -->
+					<div class="form-group">
+						<label for="requestDescription" class="control-label col-sm-3">Description:</label>
+
+						<div class="col-sm-9">
+							<textarea id="requestDescription" rows="5" class="form-control" required=""></textarea>
+						</div>
+					</div>
+
+
+				</fieldset>
+				<!-- / About the request -->
+
+				</div>
+
+			</form>
+		</div>
+		<!-- / Modal Body  -->
+
+
+
+		<div class="modal-footer">
+			<button type="submit" form="formSaveRequest" class="btn btn-primary" data-loading-text="&lt;i class='fa fa-refresh fa-spin'&gt;&lt;/i&gt;&nbsp; Enregistrement">
+				Enregistrer
+			</button>&nbsp;&nbsp;
+
+			<a href="#" data-dismiss="modal" aria-hidden="true">Annuler</a>
+		</div>
+
+
+	</div>
+	</div>
+	</div>
+
+
+
 		<!-- jQuery -->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 		<!-- Bootstrap -->
