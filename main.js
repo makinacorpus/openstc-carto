@@ -61,7 +61,8 @@ function loadData() {
 			table_body += "<tr class=" + 10000 + this.properties.site + " onmouseover='map._layers[ " + 10000 + this.properties.site +"].openPopup();''>"+table_row+"</tr>";   
 			map.addLayer(markers);
 		})
-		$("#table").html(table_body+"</table>");
+		var navigation = "<div class='btn-group'>  <button type='button' class='btn btn-primary'>Naviguer vers</button>  <button type='button' class='btn btn-primary dropdown-toggle' data-toggle='dropdown'>   <span class='caret'></span>   <span class='sr-only'>Toggle Dropdown</span>  </button>  <ul class='dropdown-menu' role='menu'>   <li><a href='espaces-verts.html'>Espaces Verts</a></li>   <li><a href='equipements.html'>Equipements</a></li></ul></div>";
+		$("#table").html(table_body + "</table>" + navigation);
 		map.on('popupopen', function (e) {
 		  $("tr." + e.popup._source._leaflet_id).css("background", "#f5f5f5");
 		});

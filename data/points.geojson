@@ -2,7 +2,7 @@
 "type": "FeatureCollection",
                                                                                 
 "features": [
-{ "type": "Feature", "properties": { "id": 6, "libelle": "Branche cassée", "nom": "Mairie", "description": "Branche cassée sur un platane", "service": "Espaces verts", "demandeur":"M. Roger" , "date": "12 décembre 2013 12:27", "statut": "validée", "site": 1, "duree": "2", "avancement": "<div class='progress'><div class='progress-bar' role='progressbar' style='width: 60%;'><span>60%</span></div></div>" } }
+{ "type": "Feature", "properties": { "id": 6, "libelle": "Fenêtre cassée", "nom": "Mairie", "description": "La fenêtre du secrétariat est fissurée", "service": "Bâtiments", "demandeur":"M. Roger" , "date": "12 décembre 2013 12:27", "statut": "validée", "site": 1, "duree": "2", "avancement": "<div class='progress'><div class='progress-bar' role='progressbar' style='width: 60%;'><span>60%</span></div></div>" } }
 ,
 { "type": "Feature", "properties": { "id": 5, "libelle": "Esthétique", "nom": "Rond-Point des Templiers", "description": "Aménagement paysager du rond-point à améliorer", "service": "Espaces Verts", "demandeur":"M. Calibaut" , "date": "11 décembre 2013 18:45", "statut": "refusée", "site": 5, "duree": "0", "avancement": "<span class='label label-danger' data-toggle='tooltip' data-original-title=''>ne pas réaliser</span>" } }
 ,

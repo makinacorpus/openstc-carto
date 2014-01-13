@@ -2,7 +2,7 @@
 <html>
   <head>
   	<meta charset="UTF-8">
-    <title>OpenSTC carto</title>
+    <title>OpenSTC carto - Equipements</title>
     <!-- CSS -->
 	  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
 	  <link rel="stylesheet" href="dist/bootstrap-switch.min.css" />
@@ -13,23 +13,47 @@
 
   <body>
   	<div class="row" id="container">
-	  	<div class="col-sm-7 col-lg-7" id="table"></div>
+	  	<div class="col-sm-7 col-lg-7" id="table">
+	  		<table class='table table-bordered table-hover'>
+	  			<thead>
+	  				<tr>
+	  					<th style='min-width: 33px;'>N°</th>
+	  					<th>Libellé</th>
+	  					<th>Site / Matériel</th>
+	  					<th>Détails</th>
+	  					<th>Service</th>
+	  					<th>Demandeur</th>
+	  					<th>Date de création</th>
+	  					<th>Statut</th>
+	  				</tr>
+	  			</thead>
+	  			<tbody>
+	  				<tr class='1890220' onmouseover='map._layers[1890220].openPopup();'>
+	  					<td>6</td>
+	  					<td>Poubelle brulée</td>
+	  					<td>Poubelle</td>
+	  					<td>La poubelle est brulée et ne peut plus être utilisée</td>
+	  					<td>Equipements</td>
+	  					<td>Service interne</td>
+	  					<td>12 décembre 2013 12:27</td>
+	  					<td>validée</td>
+	  				</tr>
+	  				<tr class='1890235' onmouseover='map._layers[1890235].openPopup();'>
+	  					<td>1</td>
+	  					<td>Poubelle arrachée</td>
+	  					<td>Poubelle</td>
+	  					<td>Poubelle par terre après un accident de voiture</td>
+	  					<td>Equipements</td>
+	  					<td>Mme Crampel</td>
+	  					<td>18 décembre 2013 18:34</td>
+	  					<td>terminée</td>
+	  				</tr>
+	  			</tbody>
+	  		</table>
+	  		<div class='btn-group'>  <button type='button' class='btn btn-primary'>Naviguer vers</button>  <button type='button' class='btn btn-primary dropdown-toggle' data-toggle='dropdown'>   <span class='caret'></span>   <span class='sr-only'>Toggle Dropdown</span>  </button>  <ul class='dropdown-menu' role='menu'>   <li><a href='/'>Page principale</a></li>   <li><a href='espaces-verts.html'>Espaces Verts</a></li></ul></div>
+	  	</div>
 	  	<div class="col-sm-5 col-lg-5" id="map"></div>
-	</div>
-	<div class="btn-group">
-  <button type="button" class="btn btn-danger">Action</button>
-  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
-    <span class="caret"></span>
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <ul class="dropdown-menu" role="menu">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
+	  </div>
 
 <div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -259,6 +283,6 @@
 		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 		<script src="dist/bootstrap-switch.min.js"></script>
 		<script src="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js?2"></script>
-		<script src="main.js"></script>
+		<script src="eq.js"></script>
   </body>
 </html>
