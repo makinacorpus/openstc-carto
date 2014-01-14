@@ -10,11 +10,14 @@ OSMMQ.addTo(map);
 var expected_keys = { "id": true, "libelle": true, "nom": true, "description": true, "service": true, "demandeur": true, "date": true, "statut": true };
 var displayed_sites = [];
 
-var redIcon = L.icon({
-    iconUrl: 'images/marker-red.png',
-    iconSize: [25, 41], 
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
+var greenMarker = L.AwesomeMarkers.icon({
+  icon: 'glyphicon-tree-deciduous',
+  markerColor: 'green'
+});
+
+var redMarker = L.AwesomeMarkers.icon({
+  icon: 'glyphicon-tree-deciduous',
+  markerColor: 'red'
 });
 
 function loadData() {
@@ -45,8 +48,9 @@ function loadData() {
 			marker.bindPopup(popupContent, popupOptions);
 			marker.on('mouseover', marker.openPopup.bind(marker));
 			marker._leaflet_id = this.properties.ID_INTRAGE;
+			marker.setIcon(greenMarker);
 			if (this.properties.ID_INTRAGE == "1888662" || this.properties.ID_INTRAGE == "1891059") {
-				marker.setIcon(redIcon);
+				marker.setIcon(redMarker);
 			};
 			markers.addLayer(marker);
 			map.addLayer(markers);

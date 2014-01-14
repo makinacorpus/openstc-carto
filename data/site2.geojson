@@ -2,6 +2,6 @@
 "type": "FeatureCollection",
                                                                                 
 "features": [
-{ "type": "Feature", "properties": { "id": 2, "nom": "Rue Berthou", "img": "rue.jpg" }, "geometry": { "type": "Point", "coordinates": [ -1.281886743284168, 47.08675985059341 ] } }
+{ "type": "Feature", "properties": { "id": 2, "nom": "Arbre 1891059", "img": "arbre3.jpg", "infos": "<ul style='padding-left: 25px;'><li>Arbre d'ornement</li><li>Planté par SARL Cambieux</li></ul>" }, "geometry": { "type": "Point", "coordinates": [ -1.28107, 47.0921 ] } }
 ]
 }

@@ -10,12 +10,16 @@ OSMMQ.addTo(map);
 var expected_keys = { "id": true, "libelle": true, "nom": true, "description": true, "service": true, "demandeur": true, "date": true, "statut": true };
 var displayed_sites = [];
 
-var redIcon = L.icon({
-    iconUrl: 'images/marker-red.png',
-    iconSize: [25, 41], 
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
+var grayMarker = L.AwesomeMarkers.icon({
+  icon: 'glyphicon-trash',
+  markerColor: 'cadetblue'
 });
+
+var redMarker = L.AwesomeMarkers.icon({
+  icon: 'glyphicon-trash',
+  markerColor: 'red'
+});
+
 
 function loadData() {
 	$.getJSON("data/poubelles.geojson", function (data) {
@@ -45,8 +49,9 @@ function loadData() {
 			marker.bindPopup(popupContent, popupOptions);
 			marker.on('mouseover', marker.openPopup.bind(marker));
 			marker._leaflet_id = this.properties.ID_INTRAGE;
+			marker.setIcon(grayMarker);
 			if (this.properties.ID_INTRAGE == "1890220" || this.properties.ID_INTRAGE == "1890235") {
-				marker.setIcon(redIcon);
+				marker.setIcon(redMarker);
 			};
 			markers.addLayer(marker);
 			map.addLayer(markers);

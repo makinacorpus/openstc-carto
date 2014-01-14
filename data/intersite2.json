@@ -2,6 +2,6 @@
 "type": "FeatureCollection",
                                                                                 
 "features": [
-{ "type": "Feature", "properties": { "id": 2, "libelle": "Panneau arraché", "nom": "Rue Berthou", "description": "Panneau sens unique au sol", "service": "Voirie", "demandeur":"Mme Lacaze" , "date": "1 décembre 2013 11:37", "statut": "terminée", "site": 2, "duree": "6", "avancement": "<div class='progress'><div class='progress-bar progress-bar-success' role='progressbar' style='width: 100%;'><span>130%</span></div></div>" } }
+{ "type": "Feature", "properties": { "id": 2, "libelle": "Arrachage arbre", "nom": "Arbre 1891059", "description": "Panneau sens unique au sol", "service": "Voirie", "demandeur":"Mme Lacaze" , "date": "1 décembre 2013 11:37", "statut": "terminée", "site": 2, "duree": "6", "avancement": "<div class='progress'><div class='progress-bar progress-bar-success' role='progressbar' style='width: 100%;'><span>130%</span></div></div>" } }
 ]
 }

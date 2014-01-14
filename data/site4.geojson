@@ -2,6 +2,6 @@
 "type": "FeatureCollection",
                                                                                 
 "features": [
-{ "type": "Feature", "properties": { "id": 4, "nom": "École Jacques Prévert", "img": "ecole.png" }, "geometry": { "type": "Point", "coordinates": [ -1.287521341393422, 47.093648106175507 ] } }
+{ "type": "Feature", "properties": { "id": 4, "nom": "École Jacques Prévert", "img": "ecole.png", "infos": "<ul style='padding-left: 25px;'><li>1200 m²</li><li>Ecole maternelle et primaire</li></ul>" }, "geometry": { "type": "Point", "coordinates": [ -1.287521341393422, 47.093648106175507 ] } }
 ]
 }

@@ -1,0 +1,7 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "id": 6, "nom": "Poubelle 1890220", "img": "poub2.JPG", "infos": "<ul style='padding-left: 25px;'><li>Modèle ZC25</li><li>Fabricant : Ets Metalouest</li></ul>" }, "geometry": { "type": "Point", "coordinates": [ -1.288505, 47.09474 ] } }
+]
+}

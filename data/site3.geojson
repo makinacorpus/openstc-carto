@@ -2,6 +2,6 @@
 "type": "FeatureCollection",
                                                                                 
 "features": [
-{ "type": "Feature", "properties": { "id": 3, "nom": "Collège Cacault", "img": "cacault.jpg" }, "geometry": { "type": "Point", "coordinates": [ -1.288641991643245, 47.092100860659855 ] } }
+{ "type": "Feature", "properties": { "id": 3, "nom": "Poubelle 1890235", "img": "poub1.jpg", "infos": "<ul style='padding-left: 25px;'><li>Modèle XC45</li><li>Fabricant : Ets Metalouest</li></ul>" }, "geometry": { "type": "Point", "coordinates": [ -1.277064, 47.088833 ] } }
 ]
 }

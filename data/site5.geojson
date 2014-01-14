@@ -2,6 +2,6 @@
 "type": "FeatureCollection",
                                                                                 
 "features": [
-{ "type": "Feature", "properties": { "id": 5, "nom": "Rond-Point des Templiers", "img": "5.jpg" }, "geometry": { "type": "Point", "coordinates": [ -1.276718429719424, 47.079281003042588 ] } }
+{ "type": "Feature", "properties": { "id": 5, "nom": "Arbre 1888662", "img": "arbre1.jpg", "infos": "<ul style='padding-left: 25px;'><li>Arbre d'ornement</li><li>Planté par SARL Cambieux</li></ul>" }, "geometry": { "type": "Point", "coordinates": [ -1.28331, 47.08664 ] } }
 ]
 }
