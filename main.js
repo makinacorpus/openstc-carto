@@ -49,8 +49,10 @@ function loadData() {
 					var popupContent = "<img src='data/img/" + data.features[0].properties.img + "'' height='52' style='margin: 5px;'>"
 									 + "<h5 style='display: inline;'>" + data.features[0].properties.nom + "</h5>"
 									 + data.features[0].properties.infos
-									 + "<button type='button' class='btn btn-default' data-toggle='modal' data-target='#modalStats' style='position: absolute;right: 20px;top: 18px;'>"
-									 + "<span class='glyphicon glyphicon-stats'></span>"
+									 + "<button type='button' class='btn btn-default' data-toggle='modal' data-target='#modalInfo"
+									 + site
+									 + "' style='position: absolute;right: 20px;top: 18px;'>"
+									 + "<span class='glyphicon glyphicon-info-sign'></span>"
 									 + "</button>"
 									 + "<table class='table table-bordered'>"
 									 + "<thead><tr><th style='min-width: 33px';>N°</th><th>Intervention</th><th>Durée</th><th>Avancement</th></tr></thead>";

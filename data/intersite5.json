@@ -2,6 +2,7 @@
 "type": "FeatureCollection",
                                                                                 
 "features": [
+{ "type": "Feature", "properties": { "id": 5, "libelle": "Coupe branche", "nom": "", "description": "", "service": "", "demandeur": "", "date": "", "statut": "terminée", "site": 4, "duree": "", "avancement": "<span class='label label-warning' data-toggle='tooltip' data-original-title=' Début prévue le vendredi, 18 octobre 2013 08:30'>à planifier</span>" } }
 
 ]
 }
