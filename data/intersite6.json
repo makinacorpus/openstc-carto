@@ -2,7 +2,7 @@
 "type": "FeatureCollection",
                                                                                 
 "features": [
-{ "type": "Feature", "properties": { "id": 3, "libelle": "Poubelle", "nom": "Collège Cacault", "description": "Poubelle devant le collège à remplacer", "service": "Service technique", "demandeur": "Service interne", "date": "3 décembre 2013 15:14", "statut": "validée", "site": 3, "duree": "1", "avancement": "<span class='label label-warning' data-toggle='tooltip' data-original-title=' Début prévue le vendredi, 18 octobre 2013 08:30'>à planifier</span>" } }
+{ "type": "Feature", "properties": { "id": 8, "libelle": "Poubelle", "nom": "Collège Cacault", "description": "Poubelle devant le collège à remplacer", "service": "Service technique", "demandeur": "Service interne", "date": "3 décembre 2013 15:14", "statut": "validée", "site": 3, "duree": "1", "avancement": "<span class='label label-warning' data-toggle='tooltip' data-original-title=' Début prévue le vendredi, 18 octobre 2013 08:30'>à planifier</span>" } }
 
 ]
 }
