@@ -46,7 +46,7 @@ function loadData() {
 		        closeButton: false
 		    };
 			marker.bindPopup(popupContent, popupOptions);
-			marker.on('mouseover', marker.openPopup.bind(marker));
+			marker.on('click', marker.openPopup.bind(marker));
 			marker._leaflet_id = this.properties.ID_INTRAGE;
 			marker.setIcon(greenMarker);
 			if (this.properties.ID_INTRAGE == "1888662" || this.properties.ID_INTRAGE == "1891059") {

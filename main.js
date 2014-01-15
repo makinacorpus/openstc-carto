@@ -74,7 +74,7 @@ function loadData() {
 					        closeButton: false
 					    };
 						marker.bindPopup(popupContent, popupOptions);
-						marker.on('mouseover', marker.openPopup.bind(marker));
+						marker.on('click', marker.openPopup.bind(marker));
 						marker._leaflet_id = '10000' + site;
 						switch(cat) {
 							case "Bâtiments":
