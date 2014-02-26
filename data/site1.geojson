@@ -2,6 +2,6 @@
 "type": "FeatureCollection",
                                                                                 
 "features": [
-{ "type": "Feature", "properties": { "id": 1, "nom": "Mairie de Clisson", "img": "mairie.jpg", "infos": "<ul style='padding-left: 25px;'><li>1400 m²</li><li>Construit en 1964</li></ul>" }, "geometry": { "type": "Point", "coordinates": [ -1.27800756934247, 47.088336598092816 ] } }
+{ "type": "Feature", "properties": { "id": 1, "nom": "Votre mairie", "img": "mairie.jpg", "infos": "<ul style='padding-left: 25px;'><li>1400 m²</li><li>Construit en 1964</li></ul>" }, "geometry": { "type": "Point", "coordinates": [ -1.27800756934247, 47.088336598092816 ] } }
 ]
 }
